@@ -2,35 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-        button { width: 50px; height: 50px; font-size: 18px; margin: 5px; }
-    </style>
+    <title>Eligibility Checker</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="text" id="display" readonly>
-    <br>
-    <button onclick="appendNumber(7)">7</button>
-    <button onclick="appendNumber(8)">8</button>
-    <button onclick="appendNumber(9)">9</button>
-    <button onclick="setOperation('+')">+</button>
-    <br>
-    <button onclick="appendNumber(4)">4</button>
-    <button onclick="appendNumber(5)">5</button>
-    <button onclick="appendNumber(6)">6</button>
-    <button onclick="setOperation('-')">-</button>
-    <br>
-    <button onclick="appendNumber(1)">1</button>
-    <button onclick="appendNumber(2)">2</button>
-    <button onclick="appendNumber(3)">3</button>
-    <button onclick="setOperation('*')">*</button>
-    <br>
-    <button onclick="appendNumber(0)">0</button>
-    <button onclick="clearDisplay()">C</button>
-    <button onclick="calculate()">=</button>
-    <button onclick="setOperation('/')">/</button>
+    <div class="container">
+        <h1>Eligibility Checker</h1>
+        
+        <div class="input-group">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+        </div>
 
-    <script src="scripts.js"></script>
+        <div class="input-group">
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" name="age" placeholder="Your Age" min="0">
+        </div>
+
+        <button id="check-button">Check Eligibility</button>
+
+        <div id="message"></div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
